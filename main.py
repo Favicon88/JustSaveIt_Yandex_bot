@@ -139,6 +139,21 @@ def yandex_url_validation(url):
     return yandex_regex_match
 
 
+def send_reklama(message, message_list, percent, ):
+    list = []
+    for i in range(0, percent // 10):
+        list.append(i)
+
+    chance = random.choices(list)
+    if chance == [1]:
+                bot.send_message(
+                    message.chat.id,
+                    random.choices(message_list),
+                    disable_web_page_preview=True,
+                    parse_mode="HTML",
+                )
+
+
 def download_video(message, url, audio=False):
     def progress(d):
         if d["status"] == "downloading":
@@ -170,6 +185,7 @@ def download_video(message, url, audio=False):
                 print(e)
 
     msg = bot.reply_to(message, "Скачивание...")
+    send_reklama(message, REKLAMA_MSG, 20)
     with yt_dlp.YoutubeDL(
         {
             "format": "mp4",

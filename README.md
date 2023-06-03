@@ -28,6 +28,6 @@ apihelper.API_URL = "http://localhost:4200/bot{0}/{1}"
 команды для сервера
 
 ```
-systemctl status justsavit-yandex-bot.service
-systemctl restart justsavit-yandex-bot.service
+systemctl status justsaveit-yandex-bot.service
+systemctl restart justsaveit-yandex-bot.service
 ```
