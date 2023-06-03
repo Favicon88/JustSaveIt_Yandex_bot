@@ -256,18 +256,19 @@ def download_video(message, url, audio=False):
 @bot.message_handler(commands=["start", "help"])
 def send_start(message):
     if message.text == "/start":
-        text = """🤖 This bot can download videos and audios from Yandex.
-Send the link, choose the format and get your file.
+        text = """🇺🇸 This bot can download video and music from Yandex.
+Send the link and get your file.
 
-🤖 Этот бот может скачивать видео и аудио из ТикТока.
-Отправь ссылку, выбери формат и получи свой файл.
+🇷🇺 Этот бот может скачивать видео и музыку из Яндекса.
+Отправь ссылку и получи свой файл.
 
-/help - О боте
+/help - about bot | о боте
+justsave.app - app | приложение
 
-👇Отправь ссылку и получи свой файл👇
+👇 send me the link | отправь мне ссылку 👇
 """
     elif message.text == "/help":
-        text = """🔥 JustSaveIt_Yandex может скачать для вас видео ролики и аудио из Yandex.
+        text = """🔥 JustSave Yandex может скачать для вас видео ролики и аудио из Yandex.
 
 Как пользоваться:
   1. Зайдите в Yandex.
